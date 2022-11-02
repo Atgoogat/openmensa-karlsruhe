@@ -1,4 +1,4 @@
-import urllib, json
+import urllib.request, json
 
 CONST_META_URL = "https://www.sw-ka.de/en/json_interface/general/"
 CONST_CANTEEN_URL = "https://www.sw-ka.de/en/json_interface/canteen/"
