@@ -26,8 +26,9 @@ def toMeals(mealData):
         if m["price_1"] == 0: # zusatz 
             note = m["meal"]
         else:
+            meal: str = m["meal"] + " " + m["dish"]
             meals.append(
-                Meal(m["meal"], "", {
+                Meal(meal.strip(), "", {
                     "pupil": m["price_4"],
                     "student": m["price_1"],
                     "employee": m["price_3"],
