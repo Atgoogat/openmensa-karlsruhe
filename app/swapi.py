@@ -40,7 +40,7 @@ def toMeals(mealData):
 
     return meals
 
-def toCategory(categoryData):
+def toCategory(categoryData, linesData):
     categories: list[Category] = []
 
     for cKey in categoryData: 
@@ -48,20 +48,20 @@ def toCategory(categoryData):
         if c[0].get("nodata") is not None:
             continue        # closed
 
-        categories.append(Category(cKey, toMeals(c)))
+        categories.append(Category(linesData.get(cKey, cKey), toMeals(c)))
 
     return categories
 
-def toCanteenDay(dayData):
+def toCanteenDay(dayData, linesData):
     days: list[CanteenDay] = []
 
     for dKey in dayData:
-        categories = toCategory(dayData[dKey])
+        categories = toCategory(dayData[dKey], linesData)
         days.append(CanteenDay(datetime.fromtimestamp(float(dKey)).strftime("%Y-%m-%d"), categories, len(categories) == 0))
 
     return days
 
-def toCanteen(canteen: str, apiData):
+def toCanteen(canteen: str, apiData, linesData: dict[str, str]):
     return Canteen(
-        toCanteenDay(apiData[canteen])
+        toCanteenDay(apiData[canteen], linesData)
     )

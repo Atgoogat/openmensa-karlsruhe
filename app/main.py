@@ -18,8 +18,14 @@ async def feed(canteen: str):
     canteenData = swapi.getCanteenData()
     if canteenData.get(canteen) is None:
         return Response(status_code=404)
+
+    try:
+        metaData = swapi.getMetaData()
+        lines = metaData["mensa"][canteen]["lines"]
+    except KeyError:
+        lines = []
         
-    c = swapi.toCanteen(canteen, canteenData)
+    c = swapi.toCanteen(canteen, canteenData, lines)
     return Response(content=generateFeedV2(c, "0.1-a"), media_type="application/xml")
 
 app = FastAPI()
