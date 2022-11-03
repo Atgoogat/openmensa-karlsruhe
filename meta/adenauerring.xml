@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openmensa version="2.1"
+           xmlns="http://openmensa.org/open-mensa-v2"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://openmensa.org/open-mensa-v2 http://openmensa.org/open-mensa-v2.xsd">
+  <version>0.1-a</version>
+  <canteen>
+    <name>Mensa Adenauerring</name>
+    <address>Adenauerring 7, 76131 Karlsruhe</address>
+    <city>Karlsruhe</city>
+    <phone>0721 6909230</phone>
+    <location latitude="49.0118339" longitude="8.4167309" />
+    <availability>public</availability>
+    <times type="opening">
+      <monday open="11:00-14:00" />
+      <tuesday open="11:00-14:00" />
+      <wednesday open="11:00-14:00" />
+      <thursday open="11:00-14:00" />
+      <friday open="11:00-14:00" />
+      <saturday closed="true" />
+      <sunday closed="true" />
+    </times>
+    <feed name="full" priority="0">
+      <schedule dayOfMonth="*" dayOfWeek="*" hour="8" retry="30 5 1440" />
+      <url>https://www.atgo-dev.de/openmensa-karlsruhe/feed/adenauerring</url>
+      <source>https://www.sw-ka.de/de/hochschulgastronomie/speiseplan/mensa_adenauerring/</source>
+    </feed>
+  </canteen>
+</openmensa>
