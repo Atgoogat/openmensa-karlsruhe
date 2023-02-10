@@ -21,7 +21,7 @@
       <sunday closed="true" />
     </times>
     <feed name="full" priority="0">
-      <schedule dayOfMonth="*" dayOfWeek="*" hour="8" retry="30 5 1440" />
+      <schedule dayOfMonth="*" dayOfWeek="*" hour="9,10" retry="30 5 1440" />
       <url>https://www.atgo-dev.de/openmensa-karlsruhe/feed/adenauerring</url>
       <source>https://www.sw-ka.de/de/hochschulgastronomie/speiseplan/mensa_adenauerring/</source>
     </feed>
