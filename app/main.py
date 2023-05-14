@@ -1,7 +1,8 @@
+from bs4 import BeautifulSoup
 from fastapi import FastAPI, Response
 from fastapi.routing import APIRouter
 import app.swapi as swapi
-from app.feedv2.feed import generateFeedV2
+from app.feedv2.feed import Canteen, generateFeedV2
 from app.feedv2.meta import getOpenMensaMetaData
 
 from os import environ
@@ -12,22 +13,24 @@ router = APIRouter()
 
 @router.get("/")
 async def root():
-    return swapi.getCanteenData()
+    canteenSoup = swapi.getCanteenHtml()
+    if canteenSoup is None:
+        return Response(status_code=404)
+
+    return swapi.getCanteen(canteenSoup)
+    return generateFeedV2(swapi.getCanteen(canteenSoup), "0.1-a")
+    
 
 @router.get("/feed/{canteen}")
 async def feed(canteen: str):
-    canteenData = swapi.getCanteenData()
-    if canteenData.get(canteen) is None:
+    canteen: Canteen
+    canteenSoup = swapi.getCanteenHtml()
+    if canteenSoup is None:
         return Response(status_code=404)
 
-    try:
-        metaData = swapi.getMetaData()
-        lines = metaData["mensa"][canteen]["lines"]
-    except KeyError:
-        lines = []
-        
-    c = swapi.toCanteen(canteen, canteenData, lines)
-    return Response(content=generateFeedV2(c, "0.1-a"), media_type="application/xml")
+    canteen = swapi.getCanteen(canteenSoup)
+
+    return Response(content=generateFeedV2(canteen, "0.1-a"), media_type="application/xml")
 
 @router.get("/meta/{canteen}")
 async def meta(canteen: str):
