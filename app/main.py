@@ -17,7 +17,6 @@ async def root():
     if canteenSoup is None:
         return Response(status_code=404)
 
-    return swapi.getCanteen(canteenSoup)
     return generateFeedV2(swapi.getCanteen(canteenSoup), "0.1-a")
     
 
