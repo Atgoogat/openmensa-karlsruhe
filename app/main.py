@@ -15,8 +15,8 @@ router = APIRouter()
 async def feedAdenauerring():
     mensaDays = []
     date = datetime.today()
-    # fetch next 10 days
-    for i in range(10):
+    # fetch next 14 days
+    for i in range(14):
         day = mensaakkapi.getMensaAdenauerringMeals(date + timedelta(days=i))
         mensaDays.append(day)
 
