@@ -55,8 +55,12 @@ def toMeals(meals: Any) -> list[Meal]:
 
     note = '\n'.join([n["name"] for n in notes])
 
+
     for meal in meals:
-        m.append(Meal(meal["name"], note, {
+        mealNote = note
+        if "sub" in meal:
+            mealNote = '\n'.join([note, meal["sub"]])
+        m.append(Meal(meal["name"], mealNote, {
             "student": toPrice(meal["price"]),
         }))
 
