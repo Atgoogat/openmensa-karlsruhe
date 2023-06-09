@@ -1,6 +1,7 @@
 from typing import Any
 import urllib.request, json
 from dataclasses import dataclass
+import re
 
 from datetime import datetime
 from app.feedv2.feed import Meal, Canteen, CanteenDay, Category
@@ -64,7 +65,12 @@ def toMeals(meals: Any) -> list[Meal]:
 def toCategories(lines: Any) -> list[Category]:
     categories: list[Category] = []
     for line in lines:
-        categories.append(Category(line[0], toMeals(line[1]["dishes"])))
+        # Akk Api has some typos by default, that includes no whitespace after "Linie x" and no whitespace between some lines and their opening times.
+        # (?=[^\s])) is a lookahead ensuring that the regex matches only if no whitespace follows.
+        lineName = re.sub(r'(Linie \d(?=[^\s]))', r'\1 ', line[0]) # Whitespaces after "Linie x" were missing
+        lineName = re.sub(r'(werk(?=[^\s]))', r'\1 ', lineName) # Whitespaces after "werk" were missing
+        lineName = re.sub(r'(?<=[^\s])(\d{2}-\d{2} Uhr)', r' \1', lineName) # Whitespaces before opening times were missing
+        categories.append(Category(lineName, toMeals(line[1]["dishes"])))
     return categories
 
 def toCanteenDay(akkMensaDay: AkkMensaDay) -> CanteenDay:
