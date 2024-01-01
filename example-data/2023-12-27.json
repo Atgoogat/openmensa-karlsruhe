@@ -1,0 +1,192 @@
+{
+  "canteens": [
+    [
+      "Mensa am Adenauerring",
+      [
+        [
+          "Linie 1Gut & G\u00fcnstig",
+          {
+            "class": "meaty",
+            "dishes": [
+              {
+                "class": "meaty",
+                "ingredients": [""],
+                "name": "GESCHLOSSEN",
+                "price": ""
+              }
+            ]
+          }
+        ],
+        [
+          "Linie 2Vegane Linie",
+          {
+            "class": "meaty",
+            "dishes": [
+              {
+                "class": "meaty",
+                "ingredients": [""],
+                "name": "GESCHLOSSEN",
+                "price": ""
+              }
+            ]
+          }
+        ],
+        [
+          "Linie 3",
+          {
+            "class": "meaty",
+            "dishes": [
+              {
+                "class": "meaty",
+                "ingredients": [""],
+                "name": "GESCHLOSSEN",
+                "price": ""
+              }
+            ]
+          }
+        ],
+        [
+          "Linie 4",
+          {
+            "class": "meaty",
+            "dishes": [
+              {
+                "class": "meaty",
+                "ingredients": [""],
+                "name": "GESCHLOSSEN",
+                "price": ""
+              }
+            ]
+          }
+        ],
+        [
+          "Linie 5",
+          {
+            "class": "meaty",
+            "dishes": [
+              {
+                "class": "meaty",
+                "ingredients": [""],
+                "name": "GESCHLOSSEN",
+                "price": ""
+              }
+            ]
+          }
+        ],
+        [
+          "Schnitzel-/Burgerbar",
+          {
+            "class": "meaty",
+            "dishes": [
+              {
+                "class": "meaty",
+                "ingredients": [""],
+                "name": "GESCHLOSSEN",
+                "price": ""
+              }
+            ]
+          }
+        ],
+        [
+          "Linie 6",
+          {
+            "class": "meaty",
+            "dishes": [
+              {
+                "class": "meaty",
+                "ingredients": [""],
+                "name": "GESCHLOSSEN",
+                "price": ""
+              }
+            ]
+          }
+        ],
+        [
+          "Sp\u00e4tausgabe und Abendessen",
+          {
+            "class": "meaty",
+            "dishes": [
+              {
+                "class": "meaty",
+                "ingredients": [""],
+                "name": "GESCHLOSSEN",
+                "price": ""
+              }
+            ]
+          }
+        ],
+        [
+          "[k\u0153ri]werk11-14 Uhr",
+          {
+            "class": "meaty",
+            "dishes": [
+              {
+                "class": "meaty",
+                "ingredients": [""],
+                "name": "GESCHLOSSEN",
+                "price": ""
+              }
+            ]
+          }
+        ],
+        [
+          "Cafeteria11-14 Uhr",
+          {
+            "class": "meaty",
+            "dishes": [
+              {
+                "class": "meaty",
+                "ingredients": [""],
+                "name": "GESCHLOSSEN",
+                "price": ""
+              }
+            ]
+          }
+        ],
+        [
+          "[pizza]werkPizza11-14 Uhr",
+          {
+            "class": "meaty",
+            "dishes": [
+              {
+                "class": "meaty",
+                "ingredients": [""],
+                "name": "GESCHLOSSEN",
+                "price": ""
+              }
+            ]
+          }
+        ],
+        [
+          "[pizza]werkPasta",
+          {
+            "class": "meaty",
+            "dishes": [
+              {
+                "class": "meaty",
+                "ingredients": [""],
+                "name": "GESCHLOSSEN",
+                "price": ""
+              }
+            ]
+          }
+        ],
+        [
+          "[pizza]werkSalate / Vorspeisen",
+          {
+            "class": "meaty",
+            "dishes": [
+              {
+                "class": "meaty",
+                "ingredients": [""],
+                "name": "GESCHLOSSEN",
+                "price": ""
+              }
+            ]
+          }
+        ]
+      ]
+    ]
+  ],
+  "date": "2023-12-27"
+}

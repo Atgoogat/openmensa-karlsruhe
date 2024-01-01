@@ -1,0 +1,574 @@
+{
+  "date": "2023-06-14",
+  "canteens": [
+    [
+      "Mensa am Adenauerring",
+      [
+        [
+          "Linie 1Gut & G\u00fcnstig",
+          {
+            "class": "vegan",
+            "dishes": [
+              {
+                "ingredients": ["2", "3", "Se", "We"],
+                "tags": ["SAT"],
+                "class": "meaty main_dish",
+                "tags_string": "[SAT]",
+                "name": "Erbseneintopf mit Bockwurst und Baguettebr\u00f6tchen",
+                "price": "3,20 \u20ac"
+              },
+              {
+                "ingredients": ["So", "Se", "We"],
+                "tags": ["VG"],
+                "class": "vegan main_dish",
+                "tags_string": "[VG]",
+                "name": "Erbseneintopf mit veganer Soja - Wurst und Baguettebr\u00f6tchen",
+                "price": "3,20 \u20ac"
+              },
+              {
+                "class": "meaty",
+                "ingredients": [""],
+                "name": "zu jedem Gericht reichen wir ein Dessert oder Salat",
+                "price": ""
+              }
+            ]
+          }
+        ],
+        [
+          "Linie 2Vegane Linie",
+          {
+            "class": "vegan",
+            "dishes": [
+              {
+                "ingredients": ["So", "Se", "We"],
+                "tags": ["VG"],
+                "class": "vegan main_dish",
+                "tags_string": "[VG]",
+                "name": "\u00dcberbackene Vollkorn-Penne mit Soja-Tomatenso\u00dfe",
+                "price": "3,50 \u20ac"
+              },
+              {
+                "class": "meaty",
+                "ingredients": [""],
+                "name": "zu jedem Gericht reichen wir ein Dessert oder Salat",
+                "price": ""
+              }
+            ]
+          }
+        ],
+        [
+          "Linie 3",
+          {
+            "class": "vegetarian",
+            "dishes": [
+              {
+                "ingredients": ["Ei", "Se", "We"],
+                "tags": ["VEG"],
+                "class": "vegetarian main_dish",
+                "tags_string": "[VEG]",
+                "name": "Schupfnudel Gem\u00fcsepfanne",
+                "price": "2,95 \u20ac"
+              },
+              {
+                "class": "meaty side_dish",
+                "ingredients": [""],
+                "name": "Blattsalat",
+                "price": "0,90 \u20ac"
+              },
+              {
+                "ingredients": ["1", "ML"],
+                "tags": ["VEG"],
+                "class": "vegetarian side_dish",
+                "tags_string": "[VEG]",
+                "name": "Verschiedene Dessert",
+                "price": "0,85 \u20ac"
+              }
+            ]
+          }
+        ],
+        [
+          "Linie 4",
+          {
+            "class": "meaty",
+            "dishes": [
+              {
+                "class": "meaty side_dish",
+                "ingredients": [""],
+                "name": "Blattsalat",
+                "price": "0,90 \u20ac"
+              },
+              {
+                "ingredients": ["1", "ML"],
+                "tags": ["VEG"],
+                "class": "vegetarian side_dish",
+                "tags_string": "[VEG]",
+                "name": "Verschiedene Dessert",
+                "price": "0,85 \u20ac"
+              },
+              {
+                "class": "meaty",
+                "ingredients": [""],
+                "name": "Hausgemachte Gnocchi mit verschiedenen So\u00dfen",
+                "price": ""
+              }
+            ]
+          }
+        ],
+        [
+          "Linie 5",
+          {
+            "class": "vegetarian",
+            "dishes": [
+              {
+                "ingredients": ["1", "Ei", "ML", "Se", "We", "Ge"],
+                "tags": ["S"],
+                "class": "meaty main_dish",
+                "tags_string": "[S]",
+                "sub": "Bratenso\u00dfe Preiselbeeren und Kartoffelp\u00fcree",
+                "name": "Schwedische K\u00f6ttbullar",
+                "price": "4,05 \u20ac"
+              },
+              {
+                "ingredients": ["1", "ML", "Se", "We", "Ge"],
+                "tags": ["VEG"],
+                "class": "vegetarian main_dish",
+                "tags_string": "[VEG]",
+                "sub": "Bratenso\u00dfe und Preiselbeeren Kartoffelp\u00fcree",
+                "name": "Falafel",
+                "price": "3,50 \u20ac"
+              },
+              {
+                "class": "meaty side_dish",
+                "ingredients": [""],
+                "name": "Blattsalat",
+                "price": "0,90 \u20ac"
+              },
+              {
+                "ingredients": ["1", "Se"],
+                "tags": ["VG"],
+                "class": "vegan side_dish",
+                "tags_string": "[VG]",
+                "name": "Buntes Karottengem\u00fcse",
+                "price": "0,90 \u20ac"
+              },
+              {
+                "ingredients": ["1", "ML"],
+                "tags": ["VEG"],
+                "class": "vegetarian side_dish",
+                "tags_string": "[VEG]",
+                "name": "Verschiedene Dessert",
+                "price": "(ab) 0,85 \u20ac"
+              },
+              {
+                "class": "meaty side_dish",
+                "ingredients": [""],
+                "name": "Tagessuppe",
+                "price": "0,55 \u20ac"
+              }
+            ]
+          }
+        ],
+        [
+          "Schnitzel-/Burgerbar",
+          {
+            "class": "meaty",
+            "dishes": [
+              {
+                "ingredients": [
+                  "4",
+                  "5",
+                  "Ei",
+                  "So",
+                  "Sn",
+                  "ML",
+                  "Se",
+                  "We",
+                  "Hf"
+                ],
+                "tags": ["S"],
+                "class": "meaty side_dish",
+                "tags_string": "[S]",
+                "sub": "Salatbuffet und Pommes - alles zur Wahl zu einem Preis",
+                "name": "Schweine- und H\u00e4hnchenschnitzel, vegetarische Leckereien,",
+                "price": "1,05 \u20ac"
+              },
+              {
+                "ingredients": ["1", "ML"],
+                "tags": ["VEG"],
+                "class": "vegetarian side_dish",
+                "tags_string": "[VEG]",
+                "name": "Verschiedene Dessert",
+                "price": "0,85 \u20ac"
+              },
+              {
+                "class": "meaty side_dish",
+                "ingredients": ["1", "Ei", "ML", "We", "GEL"],
+                "name": "Verschiedene Desserts im Portionsbecher",
+                "price": "0,65 \u20ac"
+              }
+            ]
+          }
+        ],
+        [
+          "Linie 6",
+          {
+            "class": "meaty",
+            "dishes": [
+              {
+                "ingredients": [
+                  "1",
+                  "2",
+                  "3",
+                  "Ei",
+                  "Sn",
+                  "ML",
+                  "Sf",
+                  "Sa",
+                  "We"
+                ],
+                "tags": ["R"],
+                "class": "meaty side_dish",
+                "tags_string": "[R]",
+                "name": "Hamburger Buffet Preis je 100 g",
+                "price": "1,05 \u20ac"
+              },
+              {
+                "ingredients": ["Sn", "Se"],
+                "tags": ["VG"],
+                "class": "vegan side_dish",
+                "tags_string": "[VG]",
+                "name": "Salatbuffet mit frischer Rohkost, Blattsalate und hausgemachten Dressings, Preis je 100 g",
+                "price": "1,00 \u20ac"
+              },
+              {
+                "ingredients": ["1", "ML"],
+                "tags": ["VEG"],
+                "class": "vegetarian side_dish",
+                "tags_string": "[VEG]",
+                "name": "Verschiedene Dessert",
+                "price": "0,85 \u20ac"
+              }
+            ]
+          }
+        ],
+        [
+          "Sp\u00e4tausgabe und Abendessen",
+          {
+            "class": "meaty",
+            "dishes": [
+              {
+                "class": "meaty main_dish",
+                "ingredients": [""],
+                "sub": "Info zum Speisenangebot direkt an der Ausgabe",
+                "name": "Sp\u00e4tausgabe 14:00 bis 14:30 an der Linie 2",
+                "price": "3,20 \u20ac"
+              }
+            ]
+          }
+        ],
+        [
+          "[k\u0153ri]werk11-14 Uhr",
+          {
+            "class": "vegan",
+            "dishes": [
+              {
+                "ingredients": ["Sn", "Se"],
+                "tags": ["R"],
+                "class": "meaty main_dish",
+                "tags_string": "[R]",
+                "name": "Reine Kalbsbratwurst mit Curryso\u00dfe",
+                "price": "2,10 \u20ac"
+              },
+              {
+                "ingredients": ["So", "Sn", "Se", "We", "Ma"],
+                "tags": ["VG"],
+                "class": "vegan main_dish",
+                "tags_string": "[VG]",
+                "name": "Vegane Tofu - Bratwurst mit Curryso\u00dfe",
+                "price": "2,10 \u20ac"
+              },
+              {
+                "ingredients": [""],
+                "tags": ["VG"],
+                "class": "vegan side_dish",
+                "tags_string": "[VG]",
+                "name": "koerifrites",
+                "price": "1,30 \u20ac"
+              },
+              {
+                "ingredients": ["We"],
+                "tags": ["VG"],
+                "class": "vegan",
+                "tags_string": "[VG]",
+                "name": "Zu jeder Currywurst reichen wir frisches Baguette",
+                "price": ""
+              }
+            ]
+          }
+        ],
+        [
+          "Cafeteria11-14 Uhr",
+          {
+            "class": "vegan",
+            "dishes": [
+              {
+                "ingredients": ["2", "3", "5", "ML", "We", "Ge", "LAB"],
+                "tags": ["S", "LAB"],
+                "class": "meaty main_dish",
+                "tags_string": "[S,LAB]",
+                "name": "Pizzafleischk\u00e4se im Br\u00f6tchen",
+                "price": "2,40 \u20ac"
+              },
+              {
+                "ingredients": ["2", "3", "4", "So", "Se", "We"],
+                "tags": ["VG"],
+                "class": "vegan main_dish",
+                "tags_string": "[VG]",
+                "name": "B\u00f6rek mit Spinatf\u00fcllung",
+                "price": "2,00 \u20ac"
+              }
+            ]
+          }
+        ],
+        [
+          "[pizza]werkPizza11-14 Uhr",
+          {
+            "class": "vegan",
+            "dishes": [
+              {
+                "ingredients": ["ML", "We"],
+                "tags": ["S"],
+                "class": "meaty main_dish",
+                "tags_string": "[S]",
+                "name": "Pizza Prosciutto e Rucola - italienischer luftgetrockenter Landschinken und Rucola",
+                "price": "4,65 \u20ac"
+              },
+              {
+                "ingredients": ["8", "ML", "We"],
+                "tags": ["VEG"],
+                "class": "vegetarian main_dish",
+                "tags_string": "[VEG]",
+                "name": "Pizza Mykonos - Hirtenk\u00e4se, Paprika, Oliven, rote Zwiebeln und Mais",
+                "price": "4,45 \u20ac"
+              },
+              {
+                "ingredients": ["1", "8", "We"],
+                "tags": ["VG"],
+                "class": "vegan main_dish",
+                "tags_string": "[VG]",
+                "name": "Pizza Mykonos vegan - Paprika, Oliven, rote Zwiebeln, vegane K\u00e4sealternative und Mais",
+                "price": "4,45 \u20ac"
+              },
+              {
+                "ingredients": ["2", "Ei", "ML", "We", "LAB"],
+                "tags": ["LAB"],
+                "class": "meaty main_dish",
+                "tags_string": "[LAB]",
+                "name": "Pizza Margherita vegetarisch - frische Tomaten, Mozzarella, Basilikumpesto",
+                "price": "4,05 \u20ac"
+              },
+              {
+                "ingredients": ["1", "We"],
+                "tags": ["VG"],
+                "class": "vegan main_dish",
+                "tags_string": "[VG]",
+                "name": "Pizza Margherita vegan - frische Tomaten, vegane K\u00e4sealternative, Basilikumpesto",
+                "price": "4,05 \u20ac"
+              }
+            ]
+          }
+        ],
+        [
+          "[pizza]werkSalate / Vorspeisen",
+          {
+            "class": "vegetarian",
+            "dishes": [
+              {
+                "ingredients": ["Ei"],
+                "tags": ["VEG"],
+                "class": "vegetarian main_dish",
+                "tags_string": "[VEG]",
+                "name": "Insalata piccola - kleiner Blattsalat mit Tomate, Gurke und Ei",
+                "price": "1,80 \u20ac"
+              }
+            ]
+          }
+        ]
+      ]
+    ],
+    [
+      "Mensa Moltke",
+      [
+        [
+          "Wahlessen 1",
+          {
+            "class": "meaty",
+            "dishes": [
+              {
+                "ingredients": ["1", "Ei", "ML", "Se", "We", "Ge"],
+                "tags": ["S"],
+                "class": "meaty main_dish",
+                "tags_string": "[S]",
+                "sub": "Hausgemachtes Kartoffelp\u00fcree Preiselbeeren Bratenso\u00dfe",
+                "name": "Schwedische K\u00f6ttbullar",
+                "price": "4,05 \u20ac"
+              },
+              {
+                "ingredients": ["We", "Ge"],
+                "tags": ["S"],
+                "class": "meaty side_dish",
+                "tags_string": "[S]",
+                "name": "Schnitzel Bar Puten und Schweineschnitzel je 100 g in Selbstbedienung",
+                "price": "1,05 \u20ac"
+              },
+              {
+                "ingredients": [""],
+                "tags": ["VG"],
+                "class": "vegan side_dish",
+                "tags_string": "[VG]",
+                "name": "Pommes",
+                "price": "1,05 \u20ac"
+              },
+              {
+                "ingredients": ["1", "ML", "Se", "We"],
+                "tags": ["VEG"],
+                "class": "vegetarian side_dish",
+                "tags_string": "[VEG]",
+                "name": "Tagessuppe",
+                "price": "0,55 \u20ac"
+              }
+            ]
+          }
+        ],
+        [
+          "Wahlessen 2",
+          {
+            "class": "vegetarian",
+            "dishes": [
+              {
+                "ingredients": ["1", "ML", "We", "Ge"],
+                "tags": ["VEG"],
+                "class": "vegetarian main_dish",
+                "tags_string": "[VEG]",
+                "sub": "Hausgemachtes Kartoffelp\u00fcree Preiselbeerso\u00dfe",
+                "name": "Falafel",
+                "price": "3,50 \u20ac"
+              },
+              {
+                "ingredients": ["ML", "We", "Ha"],
+                "tags": ["VEG"],
+                "class": "vegetarian side_dish",
+                "tags_string": "[VEG]",
+                "sub": "Diverse Desserts ab 0,50 EUR bis",
+                "name": "Dessertauswahl",
+                "price": "0,95 \u20ac"
+              },
+              {
+                "class": "meaty side_dish",
+                "ingredients": [""],
+                "name": "Gem\u00fcse",
+                "price": "0,90 \u20ac"
+              },
+              {
+                "ingredients": ["1", "Sn", "ML", "Sf"],
+                "tags": ["VEG"],
+                "class": "vegetarian side_dish",
+                "tags_string": "[VEG]",
+                "name": "Salat",
+                "price": "0,90 \u20ac"
+              }
+            ]
+          }
+        ],
+        [
+          "Aktionstheke",
+          {
+            "class": "vegan",
+            "dishes": [
+              {
+                "ingredients": ["Sn", "Se"],
+                "tags": ["R"],
+                "class": "meaty main_dish",
+                "tags_string": "[R]",
+                "name": "Reine Kalbsbratwurst mit Currysauce",
+                "price": "2,10 \u20ac"
+              },
+              {
+                "ingredients": ["So", "Sn", "Se", "We", "Ma"],
+                "tags": ["VG"],
+                "class": "vegan main_dish",
+                "tags_string": "[VG]",
+                "name": "Vegane Tofu-Bratwurst mit Currysauce",
+                "price": "2,10 \u20ac"
+              },
+              {
+                "ingredients": [""],
+                "tags": ["VG"],
+                "class": "vegan side_dish",
+                "tags_string": "[VG]",
+                "name": "koerifrites",
+                "price": "1,30 \u20ac"
+              },
+              {
+                "ingredients": ["We"],
+                "tags": ["VG"],
+                "class": "vegan",
+                "tags_string": "[VG]",
+                "name": "Zu jeder Currywurst reichen wir frisches Baguette",
+                "price": ""
+              }
+            ]
+          }
+        ],
+        [
+          "Gut & G\u00fcnstig",
+          {
+            "class": "vegan",
+            "dishes": [
+              {
+                "ingredients": ["2", "3", "Se", "We"],
+                "tags": ["SAT"],
+                "class": "meaty main_dish",
+                "tags_string": "[SAT]",
+                "name": "Erbseneintopf mit Bockwurst und Baguettebr\u00f6tchen",
+                "price": "3,20 \u20ac"
+              },
+              {
+                "ingredients": ["So", "Se", "We"],
+                "tags": ["VG"],
+                "class": "vegan main_dish",
+                "tags_string": "[VG]",
+                "name": "Erbseneintopf mit veganer Soja-Wurst und Baguettebr\u00f6tchen",
+                "price": "3,20 \u20ac"
+              },
+              {
+                "ingredients": ["ML", "We"],
+                "tags": ["VEG"],
+                "class": "vegetarian",
+                "tags_string": "[VEG]",
+                "name": "zu jedem Gericht reichen wir ein Dessert oder Obst",
+                "price": ""
+              }
+            ]
+          }
+        ],
+        [
+          "Buffet",
+          {
+            "class": "meaty",
+            "dishes": [
+              {
+                "ingredients": ["1", "Sn", "ML", "Sf"],
+                "tags": ["VEG"],
+                "class": "vegetarian side_dish",
+                "tags_string": "[VEG]",
+                "name": "Salatbuffet \u00fcberwiegend vegetarisch je 100g",
+                "price": "1,00 \u20ac"
+              }
+            ]
+          }
+        ]
+      ]
+    ]
+  ]
+}

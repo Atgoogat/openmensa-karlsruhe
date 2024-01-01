@@ -16,13 +16,14 @@ class AkkMensaDay:
     data: Any
 
 def loadExampleData() -> AkkMensaDay:
-    with open('./example-data/2023-06-05.json') as f:
+    #with open('./example-data/2023-06-05.json') as f:
+    with open('./example-data/2023-12-27.json') as f:
         data = json.load(f)
         date = data["date"]
         canteens = data["canteens"]
         for c in canteens:
             if c[0] == "Mensa am Adenauerring":
-                return AkkMensaDay(date, "Mensa am Adenauerring", c[1])
+                return AkkMensaDay(date, "Mensa am Adenauerring", False, c[1])
         raise Exception("mensa adenauerring not present in dataset")
     
 def getMensaAdenauerringMeals(date: datetime) -> AkkMensaDay:
@@ -80,7 +81,11 @@ def toCategories(lines: Any) -> list[Category]:
 def toCanteenDay(akkMensaDay: AkkMensaDay) -> CanteenDay:
     if akkMensaDay.closed:
         return CanteenDay(akkMensaDay.day, [], True)
-    return CanteenDay(akkMensaDay.day, toCategories(akkMensaDay.data), False)
+    # filter empty categories
+    categories = [c for c in toCategories(akkMensaDay.data) if len(c.meals) > 0]
+    if len(categories) == 0:
+        return CanteenDay(akkMensaDay.day, [], True)
+    return CanteenDay(akkMensaDay.day, categories, False)
 
 def toCanteen(akkMensaDays: list[AkkMensaDay]) -> Canteen:
     days = [toCanteenDay(day) for day in akkMensaDays]
