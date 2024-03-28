@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <openmensa version="2.1"
-           xmlns="http://openmensa.org/open-mensa-v2"
-           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-           xsi:schemaLocation="http://openmensa.org/open-mensa-v2 http://openmensa.org/open-mensa-v2.xsd">
+  xmlns="http://openmensa.org/open-mensa-v2"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://openmensa.org/open-mensa-v2 http://openmensa.org/open-mensa-v2.xsd">
   <version>0.1-a</version>
   <canteen>
     <name>Mensa Adenauerring</name>
@@ -22,7 +22,7 @@
     </times>
     <feed name="full" priority="0">
       <schedule dayOfMonth="*" dayOfWeek="*" hour="9,10" retry="30 5 1440" />
-      <url>https://www.atgo-dev.de/openmensa-karlsruhe/feed/adenauerring</url>
+      <url>https://mensa.atgo-dev.de/feed/adenauerring</url>
       <source>https://www.sw-ka.de/de/hochschulgastronomie/speiseplan/mensa_adenauerring/</source>
     </feed>
   </canteen>
