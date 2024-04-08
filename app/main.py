@@ -8,6 +8,7 @@ from app.feedv2.meta import getOpenMensaMetaData
 from os import environ
 from datetime import datetime, timedelta
 
+import concurrent.futures
 
 router = APIRouter()
 
@@ -16,8 +17,11 @@ async def feedAdenauerring():
     mensaDays = []
     date = datetime.today()
     # fetch next 14 days
-    for i in range(14):
-        day = mensaakkapi.getMensaAdenauerringMeals(date + timedelta(days=i))
+    dates = [date + timedelta(days=i) for i in range(14)]
+
+    executor = concurrent.futures.ThreadPoolExecutor(max_workers=14)
+    days = executor.map(mensaakkapi.getMensaAdenauerringMeals, dates)
+    for day in days:
         mensaDays.append(day)
 
     canteenData = mensaakkapi.toCanteen(mensaDays)
