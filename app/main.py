@@ -22,7 +22,8 @@ async def feedAdenauerring():
     executor = concurrent.futures.ThreadPoolExecutor(max_workers=14)
     days = executor.map(mensaakkapi.getMensaAdenauerringMeals, dates)
     for day in days:
-        mensaDays.append(day)
+        if day:
+            mensaDays.append(day)
 
     canteenData = mensaakkapi.toCanteen(mensaDays)
     return Response(content=generateFeedV2(canteenData, "0.1-a"), media_type="application/xml")
