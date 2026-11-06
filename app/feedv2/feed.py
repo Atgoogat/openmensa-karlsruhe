@@ -7,16 +7,17 @@ from xml.etree import ElementTree as ET
 @dataclass
 class Meal:
     name: str
-    note: str
+    notes: list[str]
     price: dict[str, float] # role -> price
 
     def toXml(self, root):
         mRoot = ET.SubElement(root, "meal")
-        ET.SubElement(mRoot, "name").text = self.name
-        if len(self.note) > 0:
-            ET.SubElement(mRoot, "note").text = self.note
+        ET.SubElement(mRoot, "name").text = self.name[:250]
+        for note in self.notes:
+            if note:
+                ET.SubElement(mRoot, "note").text = note[:250]
         for role in self.price:
-            ET.SubElement(mRoot, "price", attrib={"role": role}).text = str(self.price[role])
+            ET.SubElement(mRoot, "price", attrib={"role": role}).text = f"{self.price[role]:.2f}"
         return mRoot
 
 
