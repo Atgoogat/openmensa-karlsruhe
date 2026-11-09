@@ -70,8 +70,30 @@ def test_get_canteen_filters_range_and_handles_errors(monkeypatch):
         raise swka.UpstreamUnavailable("down")
     monkeypatch.setattr(swka, "fetchWeek", fake)
     canteen, errors = swka.getCanteen("mensa_adenauerring", date(2026, 11, 10), 14)
-    assert [d.date for d in canteen.days] == ["2026-11-10", "2026-11-11", "2026-11-12", "2026-11-13"]
+    assert [d.date for d in canteen.days] == [
+        "2026-11-10", "2026-11-11", "2026-11-12", "2026-11-13", "2026-11-14", "2026-11-15",
+    ]
     assert len(errors) == 2
+
+
+def test_weekend_is_closed(monkeypatch):
+    monkeypatch.setattr(swka, "fetchWeek", lambda canteen, week: swka.parseWeek(FIXTURE))
+    canteen, _ = swka.getCanteen("mensa_adenauerring", date(2026, 11, 9), 7)
+    closed = {d.date: d.closed for d in canteen.days}
+    assert len(closed) == 7
+    assert closed["2026-11-13"] is False
+    assert closed["2026-11-14"] is True and closed["2026-11-15"] is True
+
+    root = ET.fromstring(generateFeedV2(canteen, "test"))
+    saturday = root.find("om:canteen/om:day[@date='2026-11-14']", NS)
+    assert saturday.find("om:closed", NS) is not None
+
+
+def test_unpublished_week_is_not_closed(monkeypatch):
+    # sw-ka.de returns the current week for weeks that are not published yet
+    monkeypatch.setattr(swka, "fetchWeek", lambda canteen, week: swka.parseWeek(FIXTURE))
+    canteen, errors = swka.getCanteen("mensa_adenauerring", date(2026, 11, 16), 7)
+    assert canteen.days == [] and errors == []
 
 
 def test_endpoint_503_when_everything_fails(monkeypatch):

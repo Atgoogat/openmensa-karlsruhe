@@ -212,6 +212,23 @@ def fetchWeek(canteen: str, week: int) -> dict[str, list[Category]]:
     return parseWeek(_fetch(f"{BASE_URL}{canteen}/?kw={week}"))
 
 
+def _completeWeek(week: int, days: dict[str, list[Category]]) -> dict[str, list[Category]]:
+    """Adds the days missing from a fetched week (weekends, holidays) as closed.
+
+    The page only lists days the canteen is open, so a day of the requested week that is not
+    on the page means closed. sw-ka.de answers requests for weeks that are not published yet
+    with the current week; those pages say nothing about the requested week, so their days
+    are dropped instead of marking the whole week closed.
+    """
+    dates = [date.fromisoformat(d) for d in days]
+    if not dates or any(d.isocalendar().week != week for d in dates):
+        return {}
+    monday = dates[0] - timedelta(days=dates[0].weekday())
+    complete = {(monday + timedelta(days=i)).isoformat(): [] for i in range(7)}
+    complete.update(days)
+    return complete
+
+
 def getCanteen(canteen: str, start: date, numDays: int) -> tuple[Canteen, list[UpstreamUnavailable]]:
     """Fetches all weeks covering [start, start + numDays) and returns the canteen plus fetch errors."""
     end = start + timedelta(days=numDays)
@@ -228,9 +245,9 @@ def getCanteen(canteen: str, start: date, numDays: int) -> tuple[Canteen, list[U
 
     errors = [r for r in results if isinstance(r, UpstreamUnavailable)]
     days: dict[str, list[Category]] = {}
-    for r in results:
+    for week, r in zip(weeks, results):
         if isinstance(r, dict):
-            days.update(r)
+            days.update(_completeWeek(week, r))
 
     canteenDays = []
     for dateStr in sorted(days):
